@@ -27,7 +27,7 @@ export default function Home() {
         <div className="container">
           <div className="card">
             <h2>Буюртма қолдиринг</h2>
-            <p className="muted">Маълумотларингизни киритинг, биз сиз билан боғланамиз.</p>
+            <p className="muted">Маълумотларингизни киритинг — сизга менежерим боғланади.</p>
             <OrderForm />
             <div className="seller">
               <span>Сотувчи: <b>Зилола</b></span>

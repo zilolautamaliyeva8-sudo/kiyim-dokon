@@ -15,8 +15,7 @@ export default function Home() {
           </p>
           <ul className="perks">
             <li>✅ EMU ва BTS почта орқали етказилади</li>
-            <li>✅ Кийиб кўриб тўлов</li>
-            <li>✅ 14 кун ичида алмаштириш</li>
+            <li>✅ 100% кафолат</li>
           </ul>
           <a href="#order" className="btn btn-light">
             Буюртма бериш ↓

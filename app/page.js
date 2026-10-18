@@ -17,9 +17,6 @@ export default function Home() {
             <li>✅ EMU ва BTS почта орқали етказилади</li>
             <li>✅ 100% кафолат</li>
           </ul>
-          <a href="#order" className="btn btn-light">
-            Буюртма бериш ↓
-          </a>
         </div>
       </section>
 

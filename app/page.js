@@ -15,7 +15,7 @@ export default function Home() {
           </p>
           <ul className="perks">
             <li>✅ EMU ва BTS почта орқали етказилади</li>
-            <li>✅ 100% кафолат</li>
+            <li>✅ Етиб боришига 100% кафолат берамиз</li>
           </ul>
         </div>
       </section>
@@ -34,8 +34,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        © {new Date().getFullYear()} Кийим дўкони · Сотувчи: Зилола ·{" "}
-        <a href="tel:+998998813089">+998 99 881 30 89</a>
+        © {new Date().getFullYear()} Кийим дўкони · Сотувчи: Зилола
       </footer>
     </main>
   );

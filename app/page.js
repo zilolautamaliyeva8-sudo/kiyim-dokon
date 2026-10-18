@@ -5,7 +5,6 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="container hero-inner">
-          <span className="badge">🔥 Фақат шу ҳафта</span>
           <h1>
             Янги мавсум <span className="accent">коллекцияси</span>
           </h1>

@@ -49,11 +49,11 @@ export default function ThankYou() {
         </div>
 
         <p className="muted">
-          {left} сониядан сўнг Telegram каналимизга ўтасиз — у ерда янги моделлар ва чегирмалар!
+          {left} сониядан сўнг Telegram группамизга ўтасиз — у ерда янги моделлар ва чегирмалар!
         </p>
 
         <a href={CHANNEL_URL} className="btn btn-tg">
-          Ҳозироқ каналга ўтиш
+          Ҳозироқ группага ўтиш
         </a>
       </div>
     </main>

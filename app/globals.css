@@ -1,0 +1,142 @@
+:root {
+  --primary: #e11d48;
+  --primary-dark: #be123c;
+  --dark: #111827;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --tg: #229ed9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.container { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #111827 0%, #3b0a1c 55%, #e11d48 130%);
+  color: #fff;
+  padding: 80px 0 110px;
+}
+.hero-inner { text-align: center; }
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: clamp(30px, 6vw, 56px); line-height: 1.15; margin-bottom: 18px; }
+.accent { color: #fda4af; }
+.lead { max-width: 640px; margin: 0 auto 24px; font-size: 18px; opacity: .9; }
+.perks {
+  list-style: none;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px;
+  margin-bottom: 32px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s, background .15s, opacity .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.btn-light { background: #fff; color: var(--dark); }
+.btn-primary { background: var(--primary); color: #fff; width: 100%; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-tg { background: var(--tg); color: #fff; margin-top: 18px; }
+
+/* ORDER */
+.order { margin-top: -60px; padding-bottom: 60px; }
+.card {
+  max-width: 520px; margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+.card h2 { font-size: 26px; margin-bottom: 4px; text-align: center; }
+.muted { color: var(--muted); text-align: center; }
+.form { display: grid; gap: 16px; margin-top: 24px; }
+.form label { display: grid; gap: 6px; font-weight: 600; font-size: 14px; }
+.form input {
+  font-size: 16px;
+  padding: 14px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.form input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(225,29,72,.12); }
+.error { color: var(--primary); font-weight: 600; text-align: center; }
+
+.footer { text-align: center; color: var(--muted); padding: 24px 16px 40px; font-size: 14px; }
+
+/* THANK YOU */
+.thanks {
+  min-height: 100vh;
+  display: grid; place-items: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #fff1f2, #e0f2fe);
+}
+.thanks-card {
+  background: #fff;
+  max-width: 480px; width: 100%;
+  text-align: center;
+  border-radius: 24px;
+  padding: 40px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  animation: pop .5s ease-out both;
+}
+.thanks-card h1 { font-size: 38px; margin: 12px 0 8px; }
+.lead-dark { font-size: 17px; margin-bottom: 24px; }
+
+.check { width: 84px; height: 84px; margin: 0 auto; }
+.check svg { width: 100%; height: 100%; }
+.check-circle {
+  stroke: #16a34a; stroke-width: 3;
+  stroke-dasharray: 151; stroke-dashoffset: 151;
+  animation: draw .6s ease-out forwards;
+}
+.check-mark {
+  stroke: #16a34a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 40; stroke-dashoffset: 40;
+  animation: draw .4s .5s ease-out forwards;
+}
+
+.countdown { position: relative; width: 120px; height: 120px; margin: 0 auto 16px; }
+.ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-bg { fill: none; stroke: #e5e7eb; stroke-width: 8; }
+.ring-fg {
+  fill: none; stroke: var(--tg); stroke-width: 8; stroke-linecap: round;
+  stroke-dasharray: 327; stroke-dashoffset: 0;
+  animation-name: countdown; animation-timing-function: linear; animation-fill-mode: forwards;
+}
+.count {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-size: 40px; font-weight: 800; color: var(--dark);
+}
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes countdown { to { stroke-dashoffset: 327; } }
+@keyframes pop { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }

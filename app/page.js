@@ -29,11 +29,18 @@ export default function Home() {
             <h2>Буюртма қолдиринг</h2>
             <p className="muted">Маълумотларингизни киритинг, биз сиз билан боғланамиз.</p>
             <OrderForm />
+            <div className="seller">
+              <span>Сотувчи: <b>Зилола</b></span>
+              <a href="tel:+998998813089">📞 +998 99 881 30 89</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer className="footer">© {new Date().getFullYear()} Кийим дўкони</footer>
+      <footer className="footer">
+        © {new Date().getFullYear()} Кийим дўкони · Сотувчи: Зилола ·{" "}
+        <a href="tel:+998998813089">+998 99 881 30 89</a>
+      </footer>
     </main>
   );
 }

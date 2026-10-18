@@ -3,13 +3,25 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+// +998 90 123 45 67 ko'rinishida formatlash
+const formatPhone = (value) => {
+  let d = value.replace(/\D/g, "");
+  if (d.startsWith("998")) d = d.slice(3);
+  d = d.slice(0, 9);
+  const parts = [d.slice(0, 2), d.slice(2, 5), d.slice(5, 7), d.slice(7, 9)].filter(Boolean);
+  return "+998 " + parts.join(" ");
+};
+
 export default function OrderForm() {
   const router = useRouter();
   const [form, setForm] = useState({ name: "", phone: "+998 ", address: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: name === "phone" ? formatPhone(value) : value });
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +29,7 @@ export default function OrderForm() {
 
     const digits = form.phone.replace(/\D/g, "");
     if (form.name.trim().length < 2) return setError("Исмингизни киритинг");
-    if (digits.length < 9) return setError("Телефон рақамни тўлиқ киритинг");
+    if (digits.length !== 12) return setError("Телефон рақамни тўлиқ киритинг: +998 90 123 45 67");
     if (form.address.trim().length < 3) return setError("Манзилни киритинг");
 
     setLoading(true);
@@ -31,7 +43,11 @@ export default function OrderForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, eventId }),
       });
-      if (!res.ok) throw new Error("send failed");
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        console.error("Order error:", data);
+        throw new Error(data.error || "send failed");
+      }
       // Meta Pixel: Lead (CAPI bilan bir xil eventID — dublikat bo'lmaydi)
       if (typeof window !== "undefined" && window.fbq) {
         window.fbq("track", "Lead", {}, { eventID: eventId });
@@ -64,6 +80,8 @@ export default function OrderForm() {
           name="phone"
           type="tel"
           placeholder="+998 90 123 45 67"
+          inputMode="tel"
+          maxLength={17}
           value={form.phone}
           onChange={onChange}
           autoComplete="tel"

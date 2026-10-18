@@ -7,9 +7,7 @@ export default function Home() {
         <div className="container hero-inner">
           <span className="badge">🔥 Фақат шу ҳафта</span>
           <h1>
-            Янги мавсум коллекцияси
-            <br />
-            <span className="accent">-50% чегирма</span> билан!
+            Янги мавсум <span className="accent">коллекцияси</span>
           </h1>
           <p className="lead">
             Сифатли матолар, замонавий дизайн ва қулай нархлар. Бутун Ўзбекистон бўйлаб

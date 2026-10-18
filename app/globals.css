@@ -4,7 +4,7 @@
   --dark: #111827;
   --text: #1f2937;
   --muted: #6b7280;
-  --bg: #f3e8fb;
+  --bg: #e6d4f2;
   --tg: #229ed9;
 }
 
@@ -23,7 +23,7 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #7d4e9e 0%, #a77bca 50%, #c8a2c8 100%);
+  background: linear-gradient(135deg, #6a3f8a 0%, #8f62b3 50%, #a983b5 100%);
   color: #fff;
   padding: 80px 0 110px;
 }
@@ -96,7 +96,7 @@ body {
   min-height: 100vh;
   display: grid; place-items: center;
   padding: 24px 16px;
-  background: linear-gradient(135deg, #f3e8fb, #e3cff2);
+  background: linear-gradient(135deg, #e6d4f2, #d4b8ea);
 }
 .thanks-card {
   background: #fff;

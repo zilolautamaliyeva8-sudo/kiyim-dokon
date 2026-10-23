@@ -239,3 +239,37 @@ html { forced-color-adjust: none; color-scheme: light; }
   .product-foot { flex-direction: column; align-items: stretch; }
   .btn-small { width: 100%; }
 }
+
+/* Sotilgan kiyimlar galereyasi va skrinshot-fikrlar */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.gallery-item { aspect-ratio: 2 / 3; overflow: hidden; position: relative; border-radius: 16px; background: #f3eef8; box-shadow: 0 10px 30px rgba(60, 20, 90, .10); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.gallery-item img.cropped { position: absolute; height: auto; max-width: none; object-fit: fill; }
+.shots { columns: 3 260px; column-gap: 14px; margin-top: 28px; }
+.shot { break-inside: avoid; margin-bottom: 14px; position: relative; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgba(60, 20, 90, .08); }
+.shot img { position: absolute; left: 0; width: 100%; height: auto; display: block; }
+.order-bottom { margin-top: 0; padding: 40px 0 60px; }
+.about-stats { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 760px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .shots { columns: 1; }
+}
+
+/* Gulli bezak — ayollar uchun mayin fon */
+:root { --flowers: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg opacity='.38'%3E%3Cg fill='%239cc79a'%3E%3Cellipse cx='44' cy='74' rx='5' ry='11' transform='rotate(40 44 74)'/%3E%3Cellipse cx='70' cy='62' rx='5' ry='11' transform='rotate(-35 70 62)'/%3E%3Cellipse cx='160' cy='170' rx='5' ry='11' transform='rotate(30 160 170)'/%3E%3Cellipse cx='182' cy='150' rx='5' ry='11' transform='rotate(-50 182 150)'/%3E%3C/g%3E%3Cg fill='%23e879a6'%3E%3Cellipse cx='55' cy='41' rx='7.7' ry='14' transform='rotate(0 55 55)'/%3E%3Cellipse cx='55' cy='41' rx='7.7' ry='14' transform='rotate(72 55 55)'/%3E%3Cellipse cx='55' cy='41' rx='7.7' ry='14' transform='rotate(144 55 55)'/%3E%3Cellipse cx='55' cy='41' rx='7.7' ry='14' transform='rotate(216 55 55)'/%3E%3Cellipse cx='55' cy='41' rx='7.7' ry='14' transform='rotate(288 55 55)'/%3E%3C/g%3E%3Ccircle cx='55' cy='55' r='6.3' fill='%23f6c453'/%3E%3Cg fill='%23c084fc'%3E%3Cellipse cx='170' cy='144' rx='6.1' ry='11' transform='rotate(0 170 155)'/%3E%3Cellipse cx='170' cy='144' rx='6.1' ry='11' transform='rotate(72 170 155)'/%3E%3Cellipse cx='170' cy='144' rx='6.1' ry='11' transform='rotate(144 170 155)'/%3E%3Cellipse cx='170' cy='144' rx='6.1' ry='11' transform='rotate(216 170 155)'/%3E%3Cellipse cx='170' cy='144' rx='6.1' ry='11' transform='rotate(288 170 155)'/%3E%3C/g%3E%3Ccircle cx='170' cy='155' r='5.0' fill='%23f6c453'/%3E%3Cg fill='%23f9a8d4'%3E%3Cellipse cx='150' cy='33' rx='3.9' ry='7' transform='rotate(0 150 40)'/%3E%3Cellipse cx='150' cy='33' rx='3.9' ry='7' transform='rotate(72 150 40)'/%3E%3Cellipse cx='150' cy='33' rx='3.9' ry='7' transform='rotate(144 150 40)'/%3E%3Cellipse cx='150' cy='33' rx='3.9' ry='7' transform='rotate(216 150 40)'/%3E%3Cellipse cx='150' cy='33' rx='3.9' ry='7' transform='rotate(288 150 40)'/%3E%3C/g%3E%3Ccircle cx='150' cy='40' r='3.1' fill='%23f6c453'/%3E%3Cg fill='%23f0abfc'%3E%3Cellipse cx='40' cy='167' rx='4.4' ry='8' transform='rotate(0 40 175)'/%3E%3Cellipse cx='40' cy='167' rx='4.4' ry='8' transform='rotate(72 40 175)'/%3E%3Cellipse cx='40' cy='167' rx='4.4' ry='8' transform='rotate(144 40 175)'/%3E%3Cellipse cx='40' cy='167' rx='4.4' ry='8' transform='rotate(216 40 175)'/%3E%3Cellipse cx='40' cy='167' rx='4.4' ry='8' transform='rotate(288 40 175)'/%3E%3C/g%3E%3Ccircle cx='40' cy='175' r='3.6' fill='%23f6c453'/%3E%3C/g%3E%3C/svg%3E"); }
+body {
+  background-color: #f7eefa;
+  background-image: var(--flowers), linear-gradient(180deg, #fbf3fd 0%, #f3e4f7 100%);
+  background-size: 220px 220px, 100% 100%;
+  background-attachment: scroll, fixed;
+}
+.hero { position: relative; overflow: hidden; }
+.hero::before, .hero::after {
+  content: ""; position: absolute; width: 260px; height: 260px; pointer-events: none;
+  background: var(--flowers) center / 260px 260px no-repeat; filter: saturate(1.6) brightness(1.4);
+}
+.hero::before { top: -40px; left: -60px; transform: rotate(-15deg) scale(1.4); }
+.hero::after { bottom: -50px; right: -60px; transform: rotate(160deg) scale(1.4); }
+.hero-inner { position: relative; z-index: 1; }
+.section-title::after { content: "🌸"; display: block; font-size: 22px; margin-top: 4px; }
+.about { background: rgba(255,255,255,.85); }

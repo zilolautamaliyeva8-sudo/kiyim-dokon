@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 // +998 90 123 45 67 ko'rinishida formatlash
@@ -17,6 +17,14 @@ export default function OrderForm() {
   const [form, setForm] = useState({ name: "", phone: "+998 ", address: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [product, setProduct] = useState("");
+
+  // Katalogdagi "Буюртма бериш" tugmasi tanlangan mahsulotni shu yerga yuboradi
+  useEffect(() => {
+    const onPick = (e) => setProduct(String(e.detail || "").slice(0, 120));
+    window.addEventListener("pick-product", onPick);
+    return () => window.removeEventListener("pick-product", onPick);
+  }, []);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -41,7 +49,7 @@ export default function OrderForm() {
       const res = await fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, eventId }),
+        body: JSON.stringify({ ...form, product, eventId }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -61,6 +69,12 @@ export default function OrderForm() {
 
   return (
     <form className="form" onSubmit={onSubmit} noValidate>
+      {product && (
+        <div className="picked">
+          <span>🛍 Танланган: <b>{product}</b></span>
+          <button type="button" onClick={() => setProduct("")} aria-label="Олиб ташлаш">✕</button>
+        </div>
+      )}
       <label>
         Исмингиз
         <input

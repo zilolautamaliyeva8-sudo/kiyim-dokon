@@ -2,26 +2,11 @@ import OrderForm from "./OrderForm";
 import Catalog from "./Catalog";
 
 const REVIEWS = [
-  {
-    text: "Ассалому алайкум, хайрли кун! Заказларимни олдим, раҳмат, жуда ёқди, зўр экан. Доставка учун алоҳида раҳмат. Соғ бўлинг, ишингизга омад, барака берсин!",
-    who: "Мижоз",
-  },
-  {
-    text: "Спасибо за халат. Олдим. Катта раҳмат, зўр экан!",
-    who: "Мижоз, Нукус",
-  },
-  {
-    text: "Апа, бунча чиройли кўйлакларингиз бор! Бугунги халатнинг ранги ҳам, ўзи ҳам жуда ёқди.",
-    who: "Доимий мижоз",
-  },
-  {
-    text: "Сизга подписка қилдим. Зўр экан нарсаларингиз, баракасини берсин илоҳим!",
-    who: "Мижоз",
-  },
-  {
-    text: "Олдим, асалим! Жуда чиройли, ёқди. Аллоҳ ишларингизга барака берсин 🤲",
-    who: "Мижоз",
-  },
+  { img: "/images/a6046322-image.jpg", t: -17.1, ar: "1080 / 1439" },
+  { img: "/images/d5ee6658-image.jpg", t: -15.56, ar: "1080 / 1620" },
+  { img: "/images/4deb6d4e-image.jpg", t: -20.62, ar: "1080 / 1591" },
+  { img: "/images/8bce06f7-image.jpg", t: -46.4, ar: "1080 / 959" },
+  { img: "/images/78d1cd6f-image.jpg", t: -19.06, ar: "1080 / 1474" },
 ];
 
 export default function Home() {
@@ -40,28 +25,7 @@ export default function Home() {
             <li>✅ EMU ва BTS почта орқали етказилади</li>
             <li>✅ Етиб боришига 100% кафолат берамиз</li>
           </ul>
-        </div>
-      </section>
-
-      <section id="order" className="order">
-        <div className="container">
-          <div className="card">
-            <h2>Буюртма қолдиринг</h2>
-            <OrderForm />
-            <div className="seller">
-              <span>Сотувчи: <b>Зилола</b></span>
-              <a href="tel:+998998813089">📞 +998 99 881 30 89</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="kiyimlar">
-        <div className="container">
-          <h2 className="section-title">Бизнинг кийимлар</h2>
-          <p className="section-sub">Ёққанини танланг — «Буюртма бериш»ни босинг, биз қўнғироқ қиламиз</p>
-          <Catalog />
-
+          <a className="btn btn-light" href="#order">Буюртма бериш</a>
         </div>
       </section>
 
@@ -85,7 +49,6 @@ export default function Home() {
             </p>
             <ul className="about-stats">
               <li><b>1 йил</b><span>тажриба</span></li>
-              <li><b>2 800+</b><span>Instagram обуначилар</span></li>
               <li><b>Бутун</b><span>Ўзбекистон бўйлаб етказиш</span></li>
             </ul>
             <a className="btn btn-primary btn-inline" href="#order">Буюртма бериш</a>
@@ -93,20 +56,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" id="kiyimlar">
+        <div className="container">
+          <h2 className="section-title">Сотилган кийимлар</h2>
+          <p className="section-sub">Мижозларимиз олиб кетган кийимлардан</p>
+          <Catalog />
+        </div>
+      </section>
+
       <section className="section reviews" id="fikrlar">
         <div className="container">
           <h2 className="section-title">Мижозларимиз фикри 💬</h2>
-          <div className="review-list">
-            {REVIEWS.map((r, i) => (
-              <blockquote className="review" key={i}>
-                <div className="stars">★★★★★</div>
-                <p>«{r.text}»</p>
-                <cite>— {r.who}</cite>
-              </blockquote>
+          <div className="shots">
+            {REVIEWS.map((r) => (
+              <div className="shot" key={r.img} style={{ aspectRatio: r.ar }}>
+                <img src={r.img} alt="Мижоз фикри" loading="lazy" style={{ top: `${r.t}%` }} />
+              </div>
             ))}
           </div>
           <div className="cta-bottom">
             <a className="btn btn-primary btn-inline" href="#order">Мен ҳам буюртма бераман</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="order" className="order order-bottom">
+        <div className="container">
+          <div className="card">
+            <h2>Буюртма қолдиринг</h2>
+            <OrderForm />
+            <div className="seller">
+              <span>Сотувчи: <b>Зилола</b></span>
+              <a href="tel:+998998813089">📞 +998 99 881 30 89</a>
+            </div>
           </div>
         </div>
       </section>

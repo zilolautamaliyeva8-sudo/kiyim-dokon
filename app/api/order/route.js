@@ -38,6 +38,7 @@ export async function POST(request) {
   const name = (body.name || "").trim();
   const phone = (body.phone || "").trim();
   const address = (body.address || "").trim();
+  const product = String(body.product || "").trim().slice(0, 120);
 
   if (!name || phone.replace(/\D/g, "").length < 9 || !address) {
     return NextResponse.json({ ok: false, error: "Maydonlar to'ldirilmagan" }, { status: 400 });
@@ -68,7 +69,9 @@ export async function POST(request) {
     `🛍 <b>Янги буюртма!</b>  <code>${leadId}</code>\n\n` +
     `👤 <b>Исм:</b> ${escapeHtml(name)}\n` +
     `📞 <b>Телефон:</b> ${escapeHtml(phone)}\n` +
-    `📍 <b>Манзил:</b> ${escapeHtml(address)}\n\n` +
+    `📍 <b>Манзил:</b> ${escapeHtml(address)}\n` +
+    (product ? `🛍 <b>Маҳсулот:</b> ${escapeHtml(product)}\n` : "") +
+    `\n` +
     `🕒 ${date}\n\n` +
     `Мижоз сотиб олса — пастдаги тугмани босинг 👇`;
 

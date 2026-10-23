@@ -64,6 +64,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" id="ish-jarayonlari">
+        <div className="container">
+          <h2 className="section-title">Иш жараёнлари</h2>
+          <p className="section-sub">Буюртмаларингизни қандай тайёрлаб, жўнатишимизни кўринг — видеони босинг ▶️</p>
+          <div className="work-videos">
+            {["/images/ish-1.mp4", "/images/ish-2.mp4", "/images/ish-3.mp4"].map((v) => (
+              <video key={v} src={`${v}#t=0.5`} controls playsInline preload="metadata" />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section reviews" id="fikrlar">
         <div className="container">
           <h2 className="section-title">Мижозларимиз фикри 💬</h2>

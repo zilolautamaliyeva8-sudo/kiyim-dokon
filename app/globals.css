@@ -273,3 +273,10 @@ body {
 .hero-inner { position: relative; z-index: 1; }
 .section-title::after { content: "🌸"; display: block; font-size: 22px; margin-top: 4px; }
 .about { background: rgba(255,255,255,.85); }
+
+/* Ish jarayonlari videolari */
+.work-videos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 900px; margin: 0 auto; }
+.work-videos video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: #2a1838; display: block; box-shadow: 0 10px 30px rgba(60, 20, 90, .15); }
+@media (max-width: 760px) {
+  .work-videos { grid-template-columns: 1fr; max-width: 360px; }
+}

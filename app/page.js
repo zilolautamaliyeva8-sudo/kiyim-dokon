@@ -1,5 +1,6 @@
 import OrderForm from "./OrderForm";
 import Catalog from "./Catalog";
+import OnSale from "./OnSale";
 
 const REVIEWS = [
   { img: "/images/a6046322-image.jpg", t: -17.1, ar: "1080 / 1439" },
@@ -53,6 +54,14 @@ export default function Home() {
             </ul>
             <a className="btn btn-primary btn-inline" href="#order">Буюртма бериш</a>
           </div>
+        </div>
+      </section>
+
+      <section className="section" id="sotuvda">
+        <div className="container">
+          <h2 className="section-title">Ҳозир сотувда бор кийимлар</h2>
+          <p className="section-sub">Ёққанини танланг — ўлчам ва рангни бирга аниқлаймиз</p>
+          <OnSale />
         </div>
       </section>
 

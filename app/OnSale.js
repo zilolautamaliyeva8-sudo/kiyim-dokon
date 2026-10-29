@@ -7,6 +7,24 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Трикотаж тройка 🍂",
+    badge: "Янгилик",
+    price: "350 000 сўм",
+    details: [
+      ["Матоси", "Трикотаж"],
+      ["Размер", "54, 56, 58, 60"],
+      ["Ранги", "Қора, яшил, жигарранг"],
+    ],
+    photos: [
+      { img: "/images/sotuv-trikotaj-qora.jpg", color: "Қора", hex: "#141414" },
+      { img: "/images/sotuv-trikotaj-yashil.jpg", color: "Яшил", hex: "#0f4d33" },
+      { img: "/images/sotuv-trikotaj-yashil-2.jpg", color: "Яшил", hex: "#0f4d33" },
+      { img: "/images/sotuv-trikotaj-jigarrang.jpg", color: "Жигарранг", hex: "#4a1f1c" },
+      { img: "/images/sotuv-trikotaj-jigarrang-2.jpg", color: "Жигарранг", hex: "#4a1f1c" },
+      { img: "/images/sotuv-trikotaj-video.jpg", video: "/images/sotuv-trikotaj-video.mp4" },
+    ],
+  },
+  {
     name: "Бешкек кўйлак 🍂",
     badge: "Янгилик",
     price: "320 000 сўм",

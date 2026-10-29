@@ -7,6 +7,22 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Бешкек кўйлак 🍂",
+    badge: "Янгилик",
+    price: "320 000 сўм",
+    details: [
+      ["Размер", "50, 52, 54, 56"],
+      ["Ранги", "Қора, жигарранг"],
+      ["Кимга", "Катта размерлилар учун 💫"],
+    ],
+    photos: [
+      { img: "/images/sotuv-kuylak-qora.jpg", color: "Қора", hex: "#141414" },
+      { img: "/images/sotuv-kuylak-jigarrang.jpg", color: "Жигарранг", hex: "#4a2516" },
+      { img: "/images/sotuv-kuylak-qora-2.jpg", color: "Қора", hex: "#141414" },
+      { img: "/images/sotuv-kuylak-video.jpg", video: "/images/sotuv-kuylak-video.mp4" },
+    ],
+  },
+  {
     name: "Қишки спорт костюм (кофта + шим)",
     price: "320 000 сўм",
     details: [
@@ -42,12 +58,20 @@ const ON_SALE = [
 function SaleItem({ p }) {
   const [i, setI] = useState(0);
   const cur = p.photos[i];
-  const hasColors = p.photos.some((ph) => ph.color);
+  // Har bir rang bir marta: rang doirachasi o'sha rangdagi birinchi rasmni ochadi.
+  const colors = p.photos
+    .map((ph, k) => ({ ...ph, k }))
+    .filter((ph, idx, arr) => ph.color && arr.findIndex((x) => x.color === ph.color) === idx);
 
   return (
     <div className="product sale-item">
       <div className="product-img">
-        <img src={cur.img} alt={cur.color ? `${p.name} — ${cur.color}` : p.name} loading="lazy" />
+        {cur.video ? (
+          <video key={cur.video} src={cur.video} poster={cur.img} controls autoPlay muted playsInline loop />
+        ) : (
+          <img src={cur.img} alt={cur.color ? `${p.name} — ${cur.color}` : p.name} loading="lazy" />
+        )}
+        {p.badge && <span className="sale-badge">{p.badge}</span>}
         {p.photos.length > 1 && (
           <span className="sale-count">{i + 1} / {p.photos.length}</span>
         )}
@@ -59,9 +83,9 @@ function SaleItem({ p }) {
             <button
               key={ph.img}
               type="button"
-              className={k === i ? "active" : undefined}
+              className={`${k === i ? "active" : ""}${ph.video ? " is-video" : ""}`}
               onClick={() => setI(k)}
-              aria-label={ph.color || `Расм ${k + 1}`}
+              aria-label={ph.video ? "Видео" : ph.color || `Расм ${k + 1}`}
             >
               <img src={ph.img} alt="" loading="lazy" />
             </button>
@@ -72,19 +96,19 @@ function SaleItem({ p }) {
       <div className="product-body">
         <h3>{p.name}</h3>
 
-        {hasColors && (
+        {colors.length > 1 && (
           <div className="swatches">
-            {p.photos.map((ph, k) => (
+            {colors.map((c) => (
               <button
-                key={ph.img}
+                key={c.color}
                 type="button"
-                className={`swatch${k === i ? " active" : ""}`}
-                style={{ background: ph.hex }}
-                onClick={() => setI(k)}
-                aria-label={ph.color}
+                className={`swatch${cur.color === c.color ? " active" : ""}`}
+                style={{ background: c.hex }}
+                onClick={() => setI(c.k)}
+                aria-label={c.color}
               />
             ))}
-            <span className="swatch-name">{cur.color}</span>
+            <span className="swatch-name">{cur.video ? "Видео" : cur.color}</span>
           </div>
         )}
 

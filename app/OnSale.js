@@ -7,6 +7,35 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Велюр уй кўйлак (халат)",
+    badge: "Янгилик",
+    price: "250 000 сўм",
+    details: [
+      ["Матоси", "Х/б (пахта)"],
+      ["Размер", "54, 56, 58, 60"],
+      ["Ранги", "7 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-velyur-sariq.jpg", color: "Хантал сариқ", hex: "#c8861f" },
+      { img: "/images/sotuv-velyur-sariq-2.jpg", color: "Хантал сариқ", hex: "#c8861f" },
+      { img: "/images/sotuv-velyur-sariq-3.jpg", color: "Хантал сариқ", hex: "#c8861f" },
+      { img: "/images/sotuv-velyur-bordo.jpg", color: "Бордо", hex: "#7a1020" },
+      { img: "/images/sotuv-velyur-bordo-2.jpg", color: "Бордо", hex: "#7a1020" },
+      { img: "/images/sotuv-velyur-qizil.jpg", color: "Қизил (ёқали)", hex: "#b3191b" },
+      { img: "/images/sotuv-velyur-qizil-2.jpg", color: "Қизил (ёқали)", hex: "#b3191b" },
+      { img: "/images/sotuv-velyur-qizil-3.jpg", color: "Қизил (ёқали)", hex: "#b3191b" },
+      { img: "/images/sotuv-velyur-jigarrang.jpg", color: "Жигарранг", hex: "#9a6224" },
+      { img: "/images/sotuv-velyur-jigarrang-2.jpg", color: "Жигарранг", hex: "#9a6224" },
+      { img: "/images/sotuv-velyur-kulrang.jpg", color: "Кулранг", hex: "#5d6577" },
+      { img: "/images/sotuv-velyur-kulrang-2.jpg", color: "Кулранг", hex: "#5d6577" },
+      { img: "/images/sotuv-velyur-kulrang-3.jpg", color: "Кулранг", hex: "#5d6577" },
+      { img: "/images/sotuv-velyur-binafsha.jpg", color: "Бинафша", hex: "#7a2f6e" },
+      { img: "/images/sotuv-velyur-binafsha-2.jpg", color: "Бинафша", hex: "#7a2f6e" },
+      { img: "/images/sotuv-velyur-binafsha-3.jpg", color: "Бинафша", hex: "#7a2f6e" },
+      { img: "/images/sotuv-velyur-qora.jpg", color: "Қора", hex: "#141414" },
+    ],
+  },
+  {
     name: "Трикотаж тройка 🍂",
     badge: "Янгилик",
     price: "450 000 сўм",

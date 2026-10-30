@@ -7,6 +7,29 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Қишки двойка",
+    price: "350 000 сўм",
+    details: [
+      ["Матоси", "Начёс, қишки"],
+      ["Размер", "44 дан 54 гача"],
+      ["Ранги", "9 хил"],
+      ["Кофта узунлиги", "77 см"],
+      ["Шим узунлиги", "102 см"],
+      ["Сифати", "Премиум 😍"],
+    ],
+    photos: [
+      { img: "/images/sotuv-dvoyka-bordo.jpg", color: "Бордо", hex: "#7d1626" },
+      { img: "/images/sotuv-dvoyka-shokolad.jpg", color: "Шоколад", hex: "#3d2418" },
+      { img: "/images/sotuv-dvoyka-vishnya.jpg", color: "Тўқ вишня", hex: "#3b1517" },
+      { img: "/images/sotuv-dvoyka-jigarrang.jpg", color: "Жигарранг", hex: "#6e3d22" },
+      { img: "/images/sotuv-dvoyka-pushti.jpg", color: "Пушти", hex: "#ef9fb4" },
+      { img: "/images/sotuv-dvoyka-grafit.jpg", color: "Тўқ кулранг", hex: "#45474d" },
+      { img: "/images/sotuv-dvoyka-kok.jpg", color: "Кўк", hex: "#1f4fc9" },
+      { img: "/images/sotuv-dvoyka-yashil.jpg", color: "Яшил", hex: "#0f5c3f" },
+      { img: "/images/sotuv-dvoyka-kulrang.jpg", color: "Кулранг", hex: "#9a9ca3" },
+    ],
+  },
+  {
     name: "Велюр уй кўйлак (халат)",
     badge: "Янгилик",
     price: "250 000 сўм",
@@ -67,29 +90,6 @@ const ON_SALE = [
       { img: "/images/sotuv-kuylak-jigarrang.jpg", color: "Жигарранг", hex: "#4a2516" },
       { img: "/images/sotuv-kuylak-qora-2.jpg", color: "Қора", hex: "#141414" },
       { img: "/images/sotuv-kuylak-video.jpg", video: "/images/sotuv-kuylak-video.mp4" },
-    ],
-  },
-  {
-    name: "Қишки двойка",
-    price: "350 000 сўм",
-    details: [
-      ["Матоси", "Начёс, қишки"],
-      ["Размер", "44 дан 54 гача"],
-      ["Ранги", "9 хил"],
-      ["Кофта узунлиги", "77 см"],
-      ["Шим узунлиги", "102 см"],
-      ["Сифати", "Премиум 😍"],
-    ],
-    photos: [
-      { img: "/images/sotuv-dvoyka-bordo.jpg", color: "Бордо", hex: "#7d1626" },
-      { img: "/images/sotuv-dvoyka-shokolad.jpg", color: "Шоколад", hex: "#3d2418" },
-      { img: "/images/sotuv-dvoyka-vishnya.jpg", color: "Тўқ вишня", hex: "#3b1517" },
-      { img: "/images/sotuv-dvoyka-jigarrang.jpg", color: "Жигарранг", hex: "#6e3d22" },
-      { img: "/images/sotuv-dvoyka-pushti.jpg", color: "Пушти", hex: "#ef9fb4" },
-      { img: "/images/sotuv-dvoyka-grafit.jpg", color: "Тўқ кулранг", hex: "#45474d" },
-      { img: "/images/sotuv-dvoyka-kok.jpg", color: "Кўк", hex: "#1f4fc9" },
-      { img: "/images/sotuv-dvoyka-yashil.jpg", color: "Яшил", hex: "#0f5c3f" },
-      { img: "/images/sotuv-dvoyka-kulrang.jpg", color: "Кулранг", hex: "#9a9ca3" },
     ],
   },
   {

@@ -13,6 +13,14 @@ const REVIEWS = [
 export default function Home() {
   return (
     <main>
+      <section className="section" id="sotuvda">
+        <div className="container">
+          <h2 className="section-title">Ҳозир сотувда бор кийимлар</h2>
+          <p className="section-sub">Ёққанини танланг — ўлчам ва рангни бирга аниқлаймиз</p>
+          <OnSale />
+        </div>
+      </section>
+
       <section className="hero">
         <div className="container hero-inner">
           <h1>
@@ -54,14 +62,6 @@ export default function Home() {
             </ul>
             <a className="btn btn-primary btn-inline" href="#order">Буюртма бериш</a>
           </div>
-        </div>
-      </section>
-
-      <section className="section" id="sotuvda">
-        <div className="container">
-          <h2 className="section-title">Ҳозир сотувда бор кийимлар</h2>
-          <p className="section-sub">Ёққанини танланг — ўлчам ва рангни бирга аниқлаймиз</p>
-          <OnSale />
         </div>
       </section>
 

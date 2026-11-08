@@ -7,27 +7,6 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
-    name: "Абая — байрам ва тўйлар учун ✨",
-    badge: "Янгилик",
-    price: "950 000 сўм",
-    details: [
-      ["Ишлаб чиқарилган", "Хитой, фабрика маҳсулоти"],
-      ["Безаги", "Сваровски услубидаги тошлар"],
-      ["Размер", "48 дан 60 гача (стандарт)"],
-      ["Бичими", "Кенг, ҳар қандай қоматга мос"],
-      ["Моделлар", "6 хил"],
-    ],
-    photos: [
-      { img: "/images/sotuv-abaya-oq.jpg", color: "Оқ (пат енгли)", hex: "#ece6da" },
-      { img: "/images/sotuv-abaya-qora.jpg", color: "Қора (пат енгли)", hex: "#141414" },
-      { img: "/images/sotuv-abaya-havorang.jpg", color: "Ҳаворанг", hex: "#9fb3bf" },
-      { img: "/images/sotuv-abaya-qoratilla.jpg", color: "Қора-тилла", hex: "#b8913a" },
-      { img: "/images/sotuv-abaya-bej.jpg", color: "Беж (пат енгли)", hex: "#d9c3a0" },
-      { img: "/images/sotuv-abaya-qorakumush.jpg", color: "Қора-кумуш", hex: "#8c8c8c" },
-      { img: "/images/sotuv-abaya-video.jpg", video: "/images/sotuv-abaya-video.mp4" },
-    ],
-  },
-  {
     name: "Қишки двойка",
     price: "350 000 сўм",
     details: [

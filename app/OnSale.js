@@ -18,6 +18,7 @@ const ON_SALE = [
       ["Моделлар", "8 хил"],
     ],
     photos: [
+      { img: "/images/sotuv-abaya-oq-model.jpg", color: "Оқ (пат енгли)", hex: "#ece8e0" },
       { img: "/images/sotuv-abaya-oq.jpg", color: "Оқ (пат енгли)", hex: "#ece8e0" },
       { img: "/images/sotuv-abaya-oq-video.jpg", video: "/images/sotuv-abaya-oq-video.mp4", color: "Оқ (пат енгли)", hex: "#ece8e0" },
       { img: "/images/sotuv-abaya-qora.jpg", color: "Қора (гулли, пат енгли)", hex: "#141414" },

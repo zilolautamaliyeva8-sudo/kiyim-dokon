@@ -7,6 +7,36 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Абая — тўй ва байрамлар учун ✨",
+    badge: "Янгилик",
+    price: "950 000 сўм",
+    details: [
+      ["Ишлаб чиқарилган", "Хитой, фабрика маҳсулоти"],
+      ["Безаги", "Сваровски услубидаги тошлар"],
+      ["Размер", "48 дан 60 гача (стандарт)"],
+      ["Бичими", "Кенг, ҳар қандай қоматга мос"],
+      ["Моделлар", "8 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-abaya-oq.jpg", color: "Оқ (пат енгли)", hex: "#ece8e0" },
+      { img: "/images/sotuv-abaya-oq-video.jpg", video: "/images/sotuv-abaya-oq-video.mp4", color: "Оқ (пат енгли)", hex: "#ece8e0" },
+      { img: "/images/sotuv-abaya-qora.jpg", color: "Қора (гулли, пат енгли)", hex: "#141414" },
+      { img: "/images/sotuv-abaya-qora-video.jpg", video: "/images/sotuv-abaya-qora-video.mp4", color: "Қора (гулли, пат енгли)", hex: "#141414" },
+      { img: "/images/sotuv-abaya-bej.jpg", color: "Беж (жигарранг пат енгли)", hex: "#d9c3a0" },
+      { img: "/images/sotuv-abaya-bej-video.jpg", video: "/images/sotuv-abaya-bej-video.mp4", color: "Беж (жигарранг пат енгли)", hex: "#d9c3a0" },
+      { img: "/images/sotuv-abaya-havorang.jpg", color: "Ҳаворанг", hex: "#9fb0b0" },
+      { img: "/images/sotuv-abaya-havorang-video.jpg", video: "/images/sotuv-abaya-havorang-video.mp4", color: "Ҳаворанг", hex: "#9fb0b0" },
+      { img: "/images/sotuv-abaya-qoratilla.jpg", color: "Қора-тилла", hex: "#b8913a" },
+      { img: "/images/sotuv-abaya-qoratilla-video.jpg", video: "/images/sotuv-abaya-qoratilla-video.mp4", color: "Қора-тилла", hex: "#b8913a" },
+      { img: "/images/sotuv-abaya-oqtilla.jpg", color: "Оқ (қора-тилла гулли)", hex: "#f2ece0" },
+      { img: "/images/sotuv-abaya-oqtilla-video.jpg", video: "/images/sotuv-abaya-oqtilla-video.mp4", color: "Оқ (қора-тилла гулли)", hex: "#f2ece0" },
+      { img: "/images/sotuv-abaya-tilla.jpg", color: "Тилла (ялтироқ)", hex: "#cfae6b" },
+      { img: "/images/sotuv-abaya-tilla-video.jpg", video: "/images/sotuv-abaya-tilla-video.mp4", color: "Тилла (ялтироқ)", hex: "#cfae6b" },
+      { img: "/images/sotuv-abaya-krem.jpg", color: "Крем (жигарранг гулли)", hex: "#e8dcc4" },
+      { img: "/images/sotuv-abaya-krem-video.jpg", video: "/images/sotuv-abaya-krem-video.mp4", color: "Крем (жигарранг гулли)", hex: "#e8dcc4" },
+    ],
+  },
+  {
     name: "Қишки двойка",
     price: "350 000 сўм",
     details: [

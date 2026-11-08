@@ -38,6 +38,28 @@ const ON_SALE = [
     ],
   },
   {
+    name: "Тренч палто — кузги-қишки 🍂",
+    badge: "Янгилик",
+    price: "Нархини сўранг",
+    details: [
+      ["Узунлиги", "110 см"],
+      ["Размер", "44 дан 54 гача"],
+      ["Ранги", "Турли ранглар"],
+      ["Бичими", "Икки қатор тугмали, белбоғли"],
+    ],
+    photos: [
+      { img: "/images/sotuv-trench-shokolad.jpg", color: "Шоколад", hex: "#4a2a1c" },
+      { img: "/images/sotuv-trench-tuqkok.jpg", color: "Тўқ кўк", hex: "#1f2a44" },
+      { img: "/images/sotuv-trench-bej.jpg", color: "Беж", hex: "#e3d6c4" },
+      { img: "/images/sotuv-trench-bordo.jpg", color: "Бордо", hex: "#7a1a20" },
+      { img: "/images/sotuv-trench-jigarrang.jpg", color: "Жигарранг", hex: "#8a5028" },
+      { img: "/images/sotuv-trench-video1.jpg", video: "/images/sotuv-trench-video1.mp4" },
+      { img: "/images/sotuv-trench-video2.jpg", video: "/images/sotuv-trench-video2.mp4" },
+      { img: "/images/sotuv-trench-video3.jpg", video: "/images/sotuv-trench-video3.mp4" },
+      { img: "/images/sotuv-trench-video4.jpg", video: "/images/sotuv-trench-video4.mp4" },
+    ],
+  },
+  {
     name: "Қишки двойка",
     price: "350 000 сўм",
     details: [

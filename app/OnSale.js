@@ -143,6 +143,18 @@ const ON_SALE = [
     ],
   },
   {
+    name: "Велюр спорт двойка — йўл-йўл ✨",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр, ялтироқ"],
+      ["Бичими", "Замокли, бели ип билан тортилади"],
+      ["Ранги", "Тўқ кўк, яшил, жигарранг, бордо"],
+    ],
+    photos: [
+      { img: "/images/sotuv-velyur-sport.jpg" },
+    ],
+  },
+  {
     name: "Абая — тўй ва байрамлар учун ✨",
     badge: "Янгилик",
     price: "950 000 сўм",
@@ -207,6 +219,8 @@ const ON_SALE = [
       ["Бичими", "Замокли, енги ва шимида йўл"],
     ],
     photos: [
+      { img: "/images/sotuv-flis-zam-real.jpg" },
+      { img: "/images/sotuv-flis-zam-v1.jpg", video: "/images/sotuv-flis-zam-v1.mp4" },
       { img: "/images/sotuv-flis-zam-binafsha.jpg", color: "Бинафша", hex: "#8b62c9" },
       { img: "/images/sotuv-flis-zam-yashil.jpg", color: "Яшил", hex: "#1f5e3f" },
       { img: "/images/sotuv-flis-zam-xaki.jpg", color: "Хаки", hex: "#3d3b33" },

@@ -13,6 +13,19 @@ const REVIEWS = [
 export default function Home() {
   return (
     <main>
+      <section id="order" className="order order-top">
+        <div className="container">
+          <div className="card">
+            <h2>Буюртма қолдиринг</h2>
+            <OrderForm />
+            <div className="seller">
+              <span>Сотувчи: <b>Зилола</b></span>
+              <a href="tel:+998998813089">📞 +998 99 881 30 89</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="sotuvda">
         <div className="container">
           <h2 className="section-title">Ҳозир сотувда бор кийимлар</h2>
@@ -101,18 +114,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="order" className="order order-bottom">
-        <div className="container">
-          <div className="card">
-            <h2>Буюртма қолдиринг</h2>
-            <OrderForm />
-            <div className="seller">
-              <span>Сотувчи: <b>Зилола</b></span>
-              <a href="tel:+998998813089">📞 +998 99 881 30 89</a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <footer className="footer">
         © {new Date().getFullYear()} Zilola · Аёллар кийими · Сотувчи: Зилола

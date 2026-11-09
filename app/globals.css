@@ -300,3 +300,5 @@ body {
 .sale-badge { position: absolute; left: 10px; top: 10px; background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
 .sale-thumbs button.is-video { position: relative; }
 .sale-thumbs button.is-video::after { content: "▶"; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 18px; background: rgba(0, 0, 0, .35); }
+
+.order-top { margin-top: 0; padding: 24px 0 12px; }

@@ -7,6 +7,81 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Велюр халат — гулли 🌸",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр, юмшоқ ва иссиқ"],
+      ["Размер", "54, 56, 58, 60, 62"],
+      ["Ёқаси", "Бахмал, тугмали"],
+    ],
+    photos: [
+      { img: "/images/sotuv-xalat-oysha-qizil.jpg", color: "Қизил гулли", hex: "#8c1f2c" },
+      { img: "/images/sotuv-xalat-oysha-tuqkok.jpg", color: "Тўқ кўк гулли", hex: "#1d2a4f" },
+      { img: "/images/sotuv-xalat-oysha-yashil.jpg", color: "Яшил гулли", hex: "#21463c" },
+      { img: "/images/sotuv-xalat-oysha-olcha.jpg", color: "Олча гулли", hex: "#5a2a3a" },
+      { img: "/images/sotuv-xalat-video.jpg", video: "/images/sotuv-xalat-video.mp4" },
+    ],
+  },
+  {
+    name: "Велюр двойка — тошли ✨",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр"],
+      ["Безаги", "Ёқаси, енги ва этаги тошли"],
+      ["Бичими", "Замокли, шими билан"],
+    ],
+    photos: [
+      { img: "/images/sotuv-xalat-toshli-qora.jpg", color: "Қора", hex: "#141414" },
+      { img: "/images/sotuv-xalat-toshli-jigarrang.jpg", color: "Жигарранг", hex: "#6b4a1e" },
+      { img: "/images/sotuv-xalat-toshli-tuqkok.jpg", color: "Тўқ кўк", hex: "#1a2350" },
+      { img: "/images/sotuv-xalat-toshli-yashil.jpg", color: "Яшил", hex: "#123c38" },
+    ],
+  },
+  {
+    name: "Велюр уй кўйлак — тугмали",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр"],
+      ["Безаги", "Тўр ҳошияли, юрак тугмали"],
+      ["Ранги", "4 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-xalat-miran-qizil.jpg", color: "Қизил", hex: "#a8221e" },
+      { img: "/images/sotuv-xalat-miran-xantal.jpg", color: "Хантал", hex: "#c08a2c" },
+      { img: "/images/sotuv-xalat-miran-bordo.jpg", color: "Бордо", hex: "#6e1424" },
+      { img: "/images/sotuv-xalat-miran-binafsha.jpg", color: "Бинафша", hex: "#7a3a6e" },
+    ],
+  },
+  {
+    name: "Велюр двойка — леопард ёқали",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр"],
+      ["Ёқаси", "Леопард нақшли"],
+      ["Бичими", "Замокли, шими билан"],
+    ],
+    photos: [
+      { img: "/images/sotuv-xalat-leopard-qizil.jpg", color: "Қизил", hex: "#d8203c" },
+      { img: "/images/sotuv-xalat-leopard-gisht.jpg", color: "Ғишт ранг", hex: "#a8461c" },
+    ],
+  },
+  {
+    name: "Велюр уй кўйлак — нуқтали 💙",
+    badge: "Велюр",
+    details: [
+      ["Матоси", "Велюр"],
+      ["Безаги", "Енги ва чўнтаги нуқтали"],
+      ["Ранги", "5 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-xalat-softon-feruza.jpg", color: "Феруза", hex: "#0e5a6e" },
+      { img: "/images/sotuv-xalat-softon-kok.jpg", color: "Кўк", hex: "#2c63a0" },
+      { img: "/images/sotuv-xalat-softon-yashil.jpg", color: "Яшил", hex: "#137a50" },
+      { img: "/images/sotuv-xalat-softon-binafsha.jpg", color: "Бинафша", hex: "#6a1fa0" },
+      { img: "/images/sotuv-xalat-softon-zamok-yashil.jpg", color: "Яшил, замокли", hex: "#16804e" },
+    ],
+  },
+  {
     name: "Пўхор ёқали куртка ❄️",
     badge: "Қишки",
     details: [

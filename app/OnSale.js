@@ -7,6 +7,67 @@ import { useState } from "react";
 // photos: har bir rasm; "color" yozilsa, rasm tagida rang nomi chiqadi.
 const ON_SALE = [
   {
+    name: "Пўхор ёқали куртка ❄️",
+    badge: "Қишки",
+    details: [
+      ["Капюшони", "Катта пўхор ёқали"],
+      ["Мавсум", "Қиш, иссиқ"],
+    ],
+    photos: [
+      { img: "/images/sotuv-kurtka-01_kurtka_jigarrang.jpg", color: "Жигарранг", hex: "#4a2e1e" },
+    ],
+  },
+  {
+    name: "Узун пальто — пўхор ёқали ❄️",
+    badge: "Қишки",
+    details: [
+      ["Размер", "L дан 4XL гача"],
+      ["Хусусияти", "Енги ечиладиган, белбоғли"],
+      ["Ранги", "5 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-kurtka-04_palto_6673_1.jpg", color: "Кофе", hex: "#8a6f5c" },
+      { img: "/images/sotuv-kurtka-05_palto_6673_2.jpg", color: "Крем", hex: "#e9e2d6" },
+      { img: "/images/sotuv-kurtka-06_palto_6673_3.jpg", color: "Тўқ жигарранг", hex: "#5a4630" },
+      { img: "/images/sotuv-kurtka-07_palto_6673_4.jpg", color: "Хаки", hex: "#cdbfb4" },
+      { img: "/images/sotuv-kurtka-08_palto_6673_5.jpg", color: "Қора", hex: "#1c1c1c" },
+    ],
+  },
+  {
+    name: "Пўхор капюшонли пальто ❄️",
+    badge: "Қишки",
+    details: [
+      ["Размер", "XL дан 5XL гача"],
+      ["Хусусияти", "Енги ечиладиган"],
+      ["Ранги", "5 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-kurtka-09_palto_7521_1.jpg", color: "Кофе", hex: "#6e4e3a" },
+      { img: "/images/sotuv-kurtka-10_palto_7521_2.jpg", color: "Оқ", hex: "#ece8e0" },
+      { img: "/images/sotuv-kurtka-11_palto_7521_3.jpg", color: "Хаки", hex: "#cdb89c" },
+      { img: "/images/sotuv-kurtka-12_palto_7521_4.jpg", color: "Тўқ хаки", hex: "#8a6c55" },
+      { img: "/images/sotuv-kurtka-13_palto_7521_5.jpg", color: "Қора", hex: "#1a1a22" },
+      { img: "/images/sotuv-kurtka-14_palto_7521_6.jpg" },
+    ],
+  },
+  {
+    name: "Калта куртка — пўхор капюшонли ❄️",
+    badge: "Қишки",
+    details: [
+      ["Хусусияти", "Енги ва капюшони ечилади"],
+      ["Бели", "Ип билан тортилади"],
+      ["Ранги", "5 хил"],
+    ],
+    photos: [
+      { img: "/images/sotuv-kurtka-15_kurtka_2836_1.jpg", color: "Хантал", hex: "#9a7448" },
+      { img: "/images/sotuv-kurtka-16_kurtka_2836_2.jpg", color: "Оқ", hex: "#ece9e4" },
+      { img: "/images/sotuv-kurtka-17_kurtka_2836_3.jpg", color: "Хаки", hex: "#7d7a52" },
+      { img: "/images/sotuv-kurtka-18_kurtka_2836_4.jpg", color: "Қора", hex: "#161616" },
+      { img: "/images/sotuv-kurtka-19_kurtka_2836_5.jpg", color: "Беж", hex: "#d8c3ad" },
+      { img: "/images/sotuv-kurtka-20_kurtka_2836_6.jpg" },
+    ],
+  },
+  {
     name: "Абая — тўй ва байрамлар учун ✨",
     badge: "Янгилик",
     price: "950 000 сўм",
@@ -333,7 +394,7 @@ function SaleItem({ p }) {
         </ul>
 
         <div className="product-foot">
-          <span className="price">{p.price}</span>
+          {p.price ? <span className="price">{p.price}</span> : <span />}
           <a className="btn btn-small" href="#order">Буюртма бериш</a>
         </div>
       </div>

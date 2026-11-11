@@ -1,25 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-const SECONDS = 10;
 const PHOTOS = Array.from({ length: 17 }, (_, i) => `/images/rahmat-${String(i + 1).padStart(2, "0")}.jpg`);
 const CHANNEL_URL = process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || "https://t.me/";
 
 export default function ThankYou() {
-  const [left, setLeft] = useState(SECONDS);
-
-  useEffect(() => {
-    const timer = setInterval(() => setLeft((s) => (s > 0 ? s - 1 : 0)), 1000);
-    const redirect = setTimeout(() => {
-      window.location.href = CHANNEL_URL;
-    }, SECONDS * 1000);
-    return () => {
-      clearInterval(timer);
-      clearTimeout(redirect);
-    };
-  }, []);
-
   return (
     <main className="thanks">
       <div className="thanks-card">
@@ -35,26 +19,12 @@ export default function ThankYou() {
           Буюртмангиз қабул қилинди. Менежеримиз тез орада сиз билан боғланади.
         </p>
 
-        <div className="countdown">
-          <svg viewBox="0 0 120 120" className="ring">
-            <circle cx="60" cy="60" r="52" className="ring-bg" />
-            <circle
-              cx="60"
-              cy="60"
-              r="52"
-              className="ring-fg"
-              style={{ animationDuration: `${SECONDS}s` }}
-            />
-          </svg>
-          <span className="count">{left}</span>
-        </div>
-
         <p className="muted">
-          {left} сониядан сўнг Telegram группамизга ўтасиз — у ерда янги моделлар ва чегирмалар!
+          Telegram группамизда янги моделлар ва чегирмалар бор!
         </p>
 
         <a href={CHANNEL_URL} className="btn btn-tg">
-          Ҳозироқ группага ўтиш
+          Telegram группага ўтиш
         </a>
       </div>
 

@@ -107,6 +107,12 @@ body {
   box-shadow: 0 20px 50px rgba(0,0,0,.1);
   animation: pop .5s ease-out both;
 }
+.thanks { gap: 28px; }
+.thanks-gallery { max-width: 900px; width: 100%; }
+.thanks-gallery h2 { text-align: center; color: var(--dark); margin-bottom: 14px; }
+.thanks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 640px) { .thanks-grid { grid-template-columns: repeat(3, 1fr); } }
+.thanks-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
 .thanks-card h1 { font-size: 38px; margin: 12px 0 8px; }
 .lead-dark { font-size: 17px; margin-bottom: 24px; }
 

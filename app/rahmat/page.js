@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 const SECONDS = 10;
+const PHOTOS = Array.from({ length: 17 }, (_, i) => `/images/rahmat-${String(i + 1).padStart(2, "0")}.jpg`);
 const CHANNEL_URL = process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || "https://t.me/";
 
 export default function ThankYou() {
@@ -56,6 +57,15 @@ export default function ThankYou() {
           Ҳозироқ группага ўтиш
         </a>
       </div>
+
+      <section className="thanks-gallery">
+        <h2>Янги моделлар</h2>
+        <div className="thanks-grid">
+          {PHOTOS.map((src, i) => (
+            <img key={src} src={src} alt={`Флис тўплам ${i + 1}`} loading="lazy" />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

@@ -29,14 +29,6 @@ export default function ThankYou() {
         <p className="lead-dark">
           Буюртмангиз қабул қилинди. Менежеримиз тез орада сиз билан боғланади.
         </p>
-
-        <p className="muted">
-          Telegram группамизда янги моделлар ва чегирмалар бор!
-        </p>
-
-        <a href={CHANNEL_URL} className="btn btn-tg">
-          Telegram группага ўтиш
-        </a>
       </div>
 
       <section className="section thanks-onsale" id="sotuvda">
@@ -46,6 +38,16 @@ export default function ThankYou() {
           <OnSale />
         </div>
       </section>
+
+      <div className="thanks-tg">
+        <p className="muted">
+          Telegram группамизда янги моделлар ва чегирмалар бор!
+        </p>
+
+        <a href={CHANNEL_URL} className="btn btn-tg">
+          Telegram группага ўтиш
+        </a>
+      </div>
     </main>
   );
 }

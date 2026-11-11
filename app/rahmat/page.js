@@ -6,6 +6,15 @@ const CHANNEL_URL = process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || "https://t.m
 export default function ThankYou() {
   return (
     <main className="thanks">
+      <section className="thanks-gallery">
+        <h2>Янги моделлар</h2>
+        <div className="thanks-grid">
+          {PHOTOS.map((src, i) => (
+            <img key={src} src={src} alt={`Флис тўплам ${i + 1}`} loading="lazy" />
+          ))}
+        </div>
+      </section>
+
       <div className="thanks-card">
         <div className="check">
           <svg viewBox="0 0 52 52" aria-hidden="true">
@@ -27,15 +36,6 @@ export default function ThankYou() {
           Telegram группага ўтиш
         </a>
       </div>
-
-      <section className="thanks-gallery">
-        <h2>Янги моделлар</h2>
-        <div className="thanks-grid">
-          {PHOTOS.map((src, i) => (
-            <img key={src} src={src} alt={`Флис тўплам ${i + 1}`} loading="lazy" />
-          ))}
-        </div>
-      </section>
     </main>
   );
 }

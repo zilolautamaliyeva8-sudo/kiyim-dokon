@@ -108,6 +108,7 @@ body {
   animation: pop .5s ease-out both;
 }
 .thanks { gap: 28px; }
+.thanks-onsale { width: 100%; padding-left: 0; padding-right: 0; }
 .thanks-gallery { max-width: 900px; width: 100%; }
 .thanks-gallery h2 { text-align: center; color: var(--dark); margin-bottom: 14px; }
 .thanks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }

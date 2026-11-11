@@ -484,7 +484,7 @@ function SaleItem({ p }) {
 
         <div className="product-foot">
           {p.price ? <span className="price">{p.price}</span> : <span />}
-          <a className="btn btn-small" href="#order">Буюртма бериш</a>
+          <a className="btn btn-small" href="/#order">Буюртма бериш</a>
         </div>
       </div>
     </div>

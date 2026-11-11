@@ -1,5 +1,7 @@
 "use client";
 
+import OnSale from "../OnSale";
+
 const PHOTOS = Array.from({ length: 17 }, (_, i) => `/images/rahmat-${String(i + 1).padStart(2, "0")}.jpg`);
 const CHANNEL_URL = process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || "https://t.me/";
 
@@ -36,6 +38,14 @@ export default function ThankYou() {
           Telegram группага ўтиш
         </a>
       </div>
+
+      <section className="section thanks-onsale" id="sotuvda">
+        <div className="container">
+          <h2 className="section-title">Ҳозир сотувда бор кийимлар</h2>
+          <p className="section-sub">Ёққанини танланг — ўлчам ва рангни бирга аниқлаймиз</p>
+          <OnSale />
+        </div>
+      </section>
     </main>
   );
 }
